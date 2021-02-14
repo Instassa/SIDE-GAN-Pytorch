@@ -29,7 +29,7 @@ Please note that the trajectories provided are for KUKA LWR IV manipulation plat
 
 The pre-trained parts of the network - i.e., success rate (no self-collision) predictor and eigenvalue converted are provided with the code, pretrained on a larger original dataset. In case if the training data/robot platform changes drastically these would have to be pretrained from scratch as explained in the paper.
 
-For visualising these trajectories you would need to use [ARDL library]{https://github.com/smithjoshua001/ARDL}, please make sure you use the correct mark of a manipulator.
+For visualising these trajectories you would need to use [ARDL library](https://github.com/smithjoshua001/ARDL), please make sure you use the correct mark of a manipulator.
 
 ### To run the code
 First, **please unpack the archived training data**, then run
