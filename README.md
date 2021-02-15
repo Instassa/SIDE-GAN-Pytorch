@@ -1,6 +1,11 @@
 ### SIDE-GAN-Pytorch code for adversarial generation of dynamic system ID trajectories.
 
 This is the accompanying code for the paper 'Adversarial Generation of Informative Trajectories for Dynamics System Identification', published in IEEE iROS2020.
+It is capable of fast generation of multiple cyclic dynamic system identification trajectories, like in the figure below:
+![visual trajectories](SIDE-GAN_pictures.png)
+
+The architecture belongs to the class of generative adversarial networks (GANs) and can be summarised as follows:
+![visual trajectories](SIDE-GAN_scheme_2.pdf)
 
 If you would like a short video explanation please follow this link: https://youtu.be/N32WzBEAIFM
 
@@ -23,7 +28,7 @@ Prerequisites to run this code are as follows:
 ```
 
 
-We provide a small training dataset here, however, as it is a subsample of the training data used for the aforementioned publication the results are unlikely to be the same. If for whatever reason you require the full dataset, please contact m.jegorova@ed.ac.uk - I will be happy to provide this data.
+We provide a small training dataset for an example here, however, as it is a subsample of the training data used for the aforementioned publication the results are unlikely to be the same. If for whatever reason you require the full dataset, please contact m.jegorova@ed.ac.uk - I will be happy to provide this data.
 
 Please note that the trajectories provided are for KUKA LWR IV manipulation platforms. The generation procedure is likely to generalise to other platforms, but you will have to acquire the training trajectories parameters elsewhere (in our case we used modified Fourier transform parameters, as described in the paper). 
 
