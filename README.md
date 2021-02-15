@@ -2,10 +2,10 @@
 
 This is the accompanying code for the paper 'Adversarial Generation of Informative Trajectories for Dynamics System Identification', published in IEEE iROS2020.
 It is capable of fast generation of multiple cyclic dynamic system identification trajectories, like in the figure below:
-![visual trajectories](SIDE-GAN_pictures.png)
+![visual trajectories](./pictures/SIDE-GAN_pictures.png)
 
 The architecture belongs to the class of generative adversarial networks (GANs) and can be summarised as follows:
-![visual trajectories](SIDE-GAN_scheme_2.pdf)
+![as follows:](./pictures/SIDE-GAN_scheme_2.pdf)
 
 If you would like a short video explanation please follow this link: https://youtu.be/N32WzBEAIFM
 
