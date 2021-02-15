@@ -1,7 +1,7 @@
 ### SIDE-GAN-Pytorch code for adversarial generation of dynamic system ID trajectories.
 
 This is the accompanying code for the paper _'Adversarial Generation of Informative Trajectories for Dynamics System Identification'_, published in IEEE iROS2020.
-It is capable of fast generation of multiple cyclic dynamic system identification trajectories, like in the figure below:
+It is capable of fast generation of multiple cyclic dynamic system identification trajectories, like these:
 ![visual trajectories](./pictures/SIDE-GAN_pictures.png)
 
 The architecture belongs to the class of generative adversarial networks (GANs) and can be summarised as follows:
