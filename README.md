@@ -43,7 +43,7 @@ First, **please unpack the archived training data**, then run
 <code> python3 SIDE-GAN_fit_div_SR.py --dataset fresh_folder --dataroot ./data_for_pytorch_small </code>
 
 The outputs to expect:
-* the generated system ID trajectory parameters per training epoch (initialised with 10 different noise vectors) in `.npy' format
+* the generated system ID trajectory parameters per training epoch (initialised with 10 different noise vectors) in `.npy` format
 * correcponding generated pseudo-eigenvalues for each of these trajectories 
 * the trained network parameters per epoch.
 Currently the number of training epochs is set to 50, but that is easily changed:
