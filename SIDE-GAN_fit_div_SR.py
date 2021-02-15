@@ -18,7 +18,7 @@ import time
 #from torchsummary import summary
 
 parser = argparse.ArgumentParser()
-parser.add_argument('--dataset', required=True, help='cifar10 | lsun | mnist |imagenet | folder | lfw | fake | fresh_folder')
+parser.add_argument('--dataset', required=True, help='cifar10 | folder | lfw | fake | fresh_folder')
 parser.add_argument('--dataroot', required=True, help='path to dataset')
 parser.add_argument('--trajectf', default='result_npy_traj', help='path to generated trajectories per training step')
 parser.add_argument('--workers', type=int, help='number of data loading workers', default=2)
