@@ -39,7 +39,7 @@ loss_matrix = np.zeros((opt.niter, opt.num_of_nets))
 loss_check_matrix = np.zeros((opt.niter, opt.num_of_nets))
 loss_check_matrix_test = np.zeros((opt.niter))
 for j in range(opt.num_of_nets):
-    print('network # ', j, M)
+    print('network # ', j)
     nodes_train = torch.from_numpy((np.load('./{}/train_traj.npy'.format(opt.train_dir))))#.reshape((1440, 84)))
     distances_train = torch.from_numpy(np.load('./{}/train_label.npy'.format(opt.train_dir)))#/200000
     nodes_test = torch.from_numpy((np.load('./{}/test_traj.npy'.format(opt.train_dir))))#.reshape((360, 84)))
