@@ -67,8 +67,7 @@ usage: SIDE-GAN_fit_div_SR.py [-h] --dataset DATASET
 
 optional arguments:
   -h, --help            show this help message and exit
-  --dataset DATASET     cifar10 | lsun | mnist |imagenet | folder | lfw | fake
-                        | fresh_folder
+  --dataset DATASET     folder | lfw | fake| fresh_folder
   --dataroot DATAROOT   path to dataset
   --trajectf TRAJECTF   path to generated trajectories per training step
   --workers WORKERS     number of data loading workers
