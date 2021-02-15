@@ -18,7 +18,7 @@ import time
 #from torchsummary import summary
 
 parser = argparse.ArgumentParser()
-parser.add_argument('--dataset', required=True, help='cifar10 | folder | lfw | fake | fresh_folder')
+parser.add_argument('--dataset', required=True, help='folder | lfw | fake | fresh_folder')
 parser.add_argument('--dataroot', required=True, help='path to dataset')
 parser.add_argument('--trajectf', default='result_npy_traj', help='path to generated trajectories per training step')
 parser.add_argument('--workers', type=int, help='number of data loading workers', default=2)
@@ -37,7 +37,6 @@ parser.add_argument('--netG', default='', help="path to netG (to continue traini
 parser.add_argument('--netD', default='', help="path to netD (to continue training)")
 parser.add_argument('--outf', default='net_weights', help='folder to output images and model checkpoints')
 parser.add_argument('--manualSeed', type=int, help='manual seed')
-parser.add_argument('--classes', default='bedroom', help='comma separated list of classes for the lsun data set')
 
 def npy_loader(path):
     sample = torch.from_numpy(np.transpose(np.load(path), (2, 0, 1)))#.reshape((2, opt.imageSize, 6)))
@@ -75,7 +74,7 @@ if opt.dataset == 'fresh_folder':
                                  extensions='.npy')
     nc=2
     
-elif  opt.dataset in ['imagenet', 'folder', 'lfw']:
+elif  opt.dataset in ['folder', 'lfw']:
     # folder dataset
     dataset = dset.ImageFolder(root=opt.dataroot,
                                transform=transforms.Compose([
@@ -85,33 +84,6 @@ elif  opt.dataset in ['imagenet', 'folder', 'lfw']:
                                    transforms.Normalize((0.5, 0.5, 0.5), (0.5, 0.5, 0.5)),
                                ]))
     nc=3
-elif opt.dataset == 'lsun':
-    classes = [ c + '_train' for c in opt.classes.split(',')]
-    dataset = dset.LSUN(root=opt.dataroot, classes=classes,
-                        transform=transforms.Compose([
-                            transforms.Resize(opt.imageSize),
-                            transforms.CenterCrop(opt.imageSize),
-                            transforms.ToTensor(),
-                            transforms.Normalize((0.5, 0.5, 0.5), (0.5, 0.5, 0.5)),
-                        ]))
-    nc=3
-elif opt.dataset == 'cifar10':
-    dataset = dset.CIFAR10(root=opt.dataroot, download=True,
-                           transform=transforms.Compose([
-                               transforms.Resize(opt.imageSize),
-                               transforms.ToTensor(),
-                               transforms.Normalize((0.5, 0.5, 0.5), (0.5, 0.5, 0.5)),
-                           ]))
-    nc=3
-
-elif opt.dataset == 'mnist':
-        dataset = dset.MNIST(root=opt.dataroot, download=True,
-                           transform=transforms.Compose([
-                               transforms.Resize(opt.imageSize),
-                               transforms.ToTensor(),
-                               transforms.Normalize((0.5,), (0.5,)),
-                           ]))
-        nc=1
 
 elif opt.dataset == 'fake':
     dataset = dset.FakeData(image_size=(3, opt.imageSize, opt.imageSize),
