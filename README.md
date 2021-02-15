@@ -5,9 +5,10 @@ It is capable of fast generation of multiple cyclic dynamic system identificatio
 ![visual trajectories](./pictures/SIDE-GAN_pictures.png)
 
 The architecture belongs to the class of generative adversarial networks (GANs) and can be summarised as follows:
-![as follows:](./pictures/SIDE-GAN_scheme_2.pdf)
 
-If you would like a short video explanation please follow this link: https://youtu.be/N32WzBEAIFM
+<img src="./pictures/side-gan-scheme.png" alt="drawing" width="400"/>
+
+**If you would like a short video-explanation please follow this link: https://youtu.be/N32WzBEAIFM**
 
 ### Credit:
 
