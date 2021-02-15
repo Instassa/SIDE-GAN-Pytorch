@@ -1,4 +1,3 @@
-# original comes from: https://github.com/pytorch/examples/blob/master/dcgan/main.py
 from __future__ import print_function
 import argparse
 import os
