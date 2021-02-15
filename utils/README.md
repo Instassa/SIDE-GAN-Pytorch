@@ -17,8 +17,10 @@ You would need to have ARDL raw data to make use of the misc functions in data_p
 To run **the eigenvalue converter training** please call the following from the master folder:
 ```
 cd utils/pretraining_eigenvalue_converter/  
-python3 eigenvalue_converter.py --niter 10001
+python3 eigenvalue_converter.py --niter [number_of_iterations]
 ```
+It is a good idea to generally run a large number of iterations, current default is set to 50 000.
+
 It has the following arguments:
 ```
 usage: eigenvalue_converter.py [-h] [--train_dataset_dir TRAIN_DATASET_DIR]
@@ -40,6 +42,14 @@ optional arguments:
                         input half-batch size
   --niter NITER         number of epochs to train for
 ```
-...and will produce a folder with the best converter model (the one with the smallest loss on a test set), named `min_test_loss_converter.pth` and a couple of graphs with information about the training. 
+...and will produce a folder with the best converter model (the one with the smallest loss on a test set), named **`min_test_loss_converter.pth`** and a couple of graphs with information about the training. 
 
 
+To run **the success rate predictor** training call the following from the master directory:
+```
+cd utils/pretraining_success_rate_predictor/  
+python3 success_rate_data_preprocessing.py
+python3 success_rate_training_predictor_network.py
+
+```
+It should create a folder with trained models to use for the rest of the SIDE-GAN training.
