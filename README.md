@@ -34,7 +34,7 @@ For visualising these trajectories you would need to use [ARDL library](https://
 ### To run the code
 First, **please unpack the archived training data**, then run
 
-<code> python3 DCGAN_pytorch_double_best_fit_div_SR.py --dataset fresh_folder --dataroot ./data_for_pytorch_small </code>
+<code> python3 SIDE-GAN_fit_div_SR.py --dataset fresh_folder --dataroot ./data_for_pytorch_small </code>
 
 The outputs to expect:
 * the generated system ID trajectory parameters per training epoch (initialised with 10 different noise vectors) in `.npy' format
