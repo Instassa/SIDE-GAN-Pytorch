@@ -50,7 +50,7 @@ Currently the number of training epochs is set to 50, but that is easily changed
 
 ```
   
-usage: DCGAN_pytorch_double_best_fit_div_SR.py [-h] --dataset DATASET
+usage: SIDE-GAN_fit_div_SR.py [-h] --dataset DATASET
                                                --dataroot DATAROOT
                                                [--trajectf TRAJECTF]
                                                [--workers WORKERS]
