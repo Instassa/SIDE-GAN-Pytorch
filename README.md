@@ -63,7 +63,6 @@ usage: SIDE-GAN_fit_div_SR.py [-h] --dataset DATASET
                                                [--ngpu NGPU] [--netG NETG]
                                                [--netD NETD] [--outf OUTF]
                                                [--manualSeed MANUALSEED]
-                                               [--classes CLASSES]
 
 optional arguments:
   -h, --help            show this help message and exit
@@ -90,6 +89,5 @@ optional arguments:
   --outf OUTF           folder to output images and model checkpoints
   --manualSeed MANUALSEED
                         manual seed
-  --classes CLASSES     comma separated list of classes for the lsun data set
 ```
 
